@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#main{
+height: 100%;
+width: 100%;
+background-position: center;
+background-size: cover;
+position: absolute;
+}
+#inputs{
+width: 24rem;
+height: 28rem;
+box-shadow: 10px 10px 15px coral;
+position: relative;
+margin: 6% auto;
+border-radius: 1rem;
+font-weight: bolder;
+background-color: #12475f;
+padding: 8px;
+color: white;
+text-align: center;
+}
+
+.input{
+font-weight: bolder;
+background-color: rgba(0,0,0,0.8);
+color: white;
+border: none;
+margin: 10px;
+padding: 10px;
+box-shadow: 4px 4px 10px white;
+border-radius: 9px;
+}
+p{
+margin-top: 15px;
+}
+.footer{
+width: 100%;
+margin-top: 45%;
+text-align: center;
+padding: 30px 0;
+}
+
+.footer h4{
+margin-bottom: 25px;
+margin-top: 20px;
+font-weight: 600;
+}
+.icons .fa{
+ color: #f44336;
+ margin: 0 13px;
+ cursor: pointer;
+ padding: 18px 0;
+}
+.fa-heart-o{
+color: #f44336;
+}
+
+@media(max-width: 700px){
+.text-box h1{
+  font-size: 20px;
+}
+</style>
+<meta name="viewport" content="with=device-width, initial-scale=1.0">
+<title>University website Design</title>
+<link rel="stylesheet"  href="style.css">
+<script type="text/javascript" src="index.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="sub-header">
+<nav>
+<a href="index.html"><img src="images/logo.png"></a>
+<div class="nav-links" id="navLinks">
+<i class="fa fa-times" onclick="hideMenu()"></i>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="about.html">ABOUT</a></li>
+<li><a href="course.html">COURSE</a></li>
+<li><a href="blog.html">BLOG</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="reg.html">REGISTRATION</a></li>
+<li><a href="result.html">RESULT</a></li>
+</ul>
+</div>
+<i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+<h1>Check the results</h1>
+</section>
+
+
+
+<div id="main">
+<div id="inputs" align="center">
+<h2>Enter your name and<br> find out your exam results</h2>
+<input type="text" name="" id="studentname" placeholder="Student name">
+<br><br>
+<input type="button" name="" onclick="result()" value="Check your result!">
+
+<p id="output"></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<section class="footer">
+<h4>About Us</h4>
+<p>Every day is an apology to my humanity; because I am not perfect, 
+I get to try again and again to "get it right."<br> I breathe the peace of eternity, knowing that this stage is temporary; real existence is continuous. 
+The hourglass of life incessantly trickles on and we are powerless to stop it.</p>
+<div class="icons">
+<i class="fa fa-facebook"></i>
+<i class="fa fa-twitter"></i>
+<i class="fa fa-instagram"></i>
+<i class="fa fa-linkedin"></i>
+</div>
+<p>Made with<i class="fa fa-heart-o"></i> by SPS Group</p>
+</section>
+<script>
+function result()
+{
+
+    SIVA  = {
+        math: "100",
+        physics: 97,
+        chemistry: 100
+    };
+    SHAWN = {
+        math: 100,
+        physics: 99,
+        chemistry: 100
+    }; 
+    PRAVESUYA = {
+        math: 100,
+        physics: 89,
+        chemistry: 90
+    };
+    PREETHI = {
+        math: 99,
+        physics: 98,
+        chemistry: 100
+    };  
+    MUTHU = {
+        math: 100,
+        physics: 89,
+        chemistry: 100
+    };
+    RAMALAKSHMI = {
+        math: 100,
+        physics: 86,
+        chemistry: 90
+    };
+
+    JIMIN = {
+        math: 100,
+        physics: 90,
+        chemistry: 91
+    };
+
+    LION = {
+        math: 100,
+        physics: 89,
+        chemistry: 90
+    };
+
+    SREEMATHI = {
+        math: 100,
+        physics: 90,
+        chemistry: 78
+    };
+
+    var h = document.getElementById('studentname').value;
+    var h1 = h.toUpperCase();
+    if(h1 == "SIVA")
+    {
+        document.getElementById('output').innerHTML = "Maths mark is "+ SIVA.math + "<hr>Physics mark is "+SIVA.physics + "<hr>Chemistry mark is "+SIVA.chemistry;
+    }
+    else if(h1 == "SHAWN")
+    {
+        document.getElementById('output').innerHTML = "Maths mark is "+ SHAWN.math + "<hr>Physics mark is "+SHAWN.physics + "<hr>Chemistry mark is "+SHAWN.chemistry;
+    }
+    else if(h1 == "PRAVESUYA")
+    {
+        document.getElementById('output').innerHTML = "Maths mark is "+ PRAVESUYA.math + "<hr>Physics mark is "+PRAVESUYA.physics + "<hr>Chemistry mark is "+PRAVESUYA.chemistry;
+    }
+
+    else if(h1 == "PREETHI")
+    {
+        document.getElementById('output').innerHTML = "Maths mark is "+ PREETHI.math + "<hr>Physics mark is "+PREETHI.physics + "<hr>Chemistry mark is "+PREETHI.chemistry;
+    }
+    else if(h1 == "MUTHU")
+    {
+        document.getElementById('output').innerHTML = "Maths mark is "+ MUTHU.math + "<hr>Physics mark is "+MUTHU.physics + "<hr>Chemistry mark is "+MUTHU.chemistry;
+    }
+    else if(h1 == "RAMALAKSHMI")
+    {
+        document.getElementById('output').innerHTML = "Maths mark is "+ RAMALAKSHMI.math + "<hr>Physics mark is "+RAMALAKSHMI.physics + "<hr>Chemistry mark is "+RAMALAKSHMI.chemistry;
+    }
+    else if(h1 == "JIMIN")
+    {
+        document.getElementById('output').innerHTML = "Maths mark is "+ JIMIN.math + "<hr>Physics mark is "+JIMIN.physics + "<hr>Chemistry mark is "+JIMIN.chemistry;
+    }
+    else if(h1 == "LION")
+    {
+        document.getElementById('output').innerHTML = "Maths mark is "+ LION.math + "<hr>Physics mark is "+LION.physics + "<hr>Chemistry mark is "+LION.chemistry;
+    }
+    else if(h1 == "SHAWN")
+    {
+        document.getElementById('output').innerHTML = "Maths mark is "+ SHAWN.math + "<hr>Physics mark is "+SHAWN.physics + "<hr>Chemistry mark is "+SHAWN.chemistry;
+    }
+    
+    else
+    {
+        document.getElementById('output').innerHTML = "There is no information about this student";
+    }
+}
+
+</script>
+
+
+<script>
+var navLinks = document.getElementById("navLinks");
+function showMenu(){
+navLinks.style.right="0";
+}
+function hideMenu(){
+navLinks.style.right="-200px";
+}
+</script>
+
+
+
+
+
+</body>
+</html>
